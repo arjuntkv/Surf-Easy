@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:background="#323639"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_weight="2">
+
+        <EditText
+            android:id="@+id/search_edttxt"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="6"
+            android:alpha="0.60"
+            android:background="@drawable/rounded_corner"
+            android:ems="10"
+            android:hint=" Search or Enter URL"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:alpha="0.50"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#1c1c1f"
+            android:paddingLeft="8dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="3dp"
+            android:src="@drawable/search" />
+
+        <ImageView
+            android:id="@+id/voice_button"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:alpha="0.50"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#1c1c1f"
+            android:paddingLeft="8dp"
+            android:paddingTop="10dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="9dp"
+            android:src="@drawable/ic_keyboard_voice_black_24dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="308dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/logo" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="450dp"
+        android:foregroundGravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <!--Facebook-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="2">
+
+            <ImageButton
+                android:id="@+id/facebook_btn"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:background="@drawable/facebook" />
+
+        </RelativeLayout>
+
+        <!--Twitter-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <ImageButton
+                android:id="@+id/twitter_btn"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:background="@drawable/twitter" />
+
+        </RelativeLayout>
+
+
+        <!--Insta-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="2">
+
+            <ImageButton
+                android:id="@+id/insta_btn"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:background="@drawable/insta" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

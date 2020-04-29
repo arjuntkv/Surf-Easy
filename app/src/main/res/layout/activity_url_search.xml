@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:background="#323639"
+    android:layout_height="match_parent"
+    tools:context=".UrlSearch">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_weight="2">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="9dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:alpha="0.50"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#1c1c1f"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/back" />
+
+        <EditText
+            android:id="@+id/search_edttxt2"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="6"
+            android:alpha="0.60"
+            android:background="@drawable/rounded_corner"
+            android:ems="10"
+            android:hint=" Search or Enter URL"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/search_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:alpha="0.50"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#1c1c1f"
+            android:paddingLeft="8dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="3dp"
+            android:src="@drawable/search" />
+
+        <ImageView
+            android:id="@+id/home_button"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:alpha="0.50"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#1c1c1f"
+            android:paddingLeft="6dp"
+            android:paddingTop="10dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="9dp"
+            android:src="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/forward_button"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:alpha="0.50"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#1c1c1f"
+            android:paddingLeft="6dp"
+            android:paddingTop="10dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="9dp"
+            android:src="@drawable/forward" />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_marginTop="73dp"
+        android:layout_width="match_parent"
+        android:layout_height="676dp">
+            <WebView
+                android:id="@+id/search_website"
+                android:layout_width="match_parent"
+                android:layout_height="670dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="55dp"
+                android:layout_marginBottom="0dp" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+</RelativeLayout>
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:background="#323639"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context=".UrlSearch">-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="68dp"-->
+        <!--android:layout_weight="2">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/back_button"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--android:layout_marginBottom="3dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:alpha="0.50"-->
+            <!--android:paddingLeft="8dp"-->
+            <!--android:paddingRight="4dp"-->
+            <!--android:paddingBottom="9dp"-->
+            <!--android:background="@drawable/rounded_corner"-->
+            <!--android:backgroundTint="#1c1c1f"-->
+            <!--android:paddingTop="10dp"-->
+            <!--android:src="@drawable/back"-->
+            <!--/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/search_edttxt2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginTop="4dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:layout_weight="6"-->
+            <!--android:alpha="0.60"-->
+            <!--android:background="@drawable/rounded_corner"-->
+            <!--android:ems="10"-->
+            <!--android:hint=" Search or Enter URL"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:inputType="textPersonName"-->
+            <!--android:textColorHint="@android:color/white"/>-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/search_button2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:alpha="0.50"-->
+            <!--android:paddingLeft="8dp"-->
+            <!--android:paddingBottom="3dp"-->
+            <!--android:background="@drawable/rounded_corner"-->
+            <!--android:backgroundTint="#1c1c1f"-->
+            <!--android:paddingTop="10dp"-->
+            <!--android:src="@drawable/search"-->
+            <!--/>-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/home_button"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:alpha="0.50"-->
+            <!--android:paddingLeft="8dp"-->
+            <!--android:paddingRight="4dp"-->
+            <!--android:paddingBottom="9dp"-->
+            <!--android:background="@drawable/rounded_corner"-->
+            <!--android:backgroundTint="#1c1c1f"-->
+            <!--android:paddingTop="10dp"-->
+            <!--android:src="@drawable/home"-->
+            <!--/>-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/forward_button"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:alpha="0.50"-->
+            <!--android:paddingLeft="8dp"-->
+            <!--android:paddingRight="4dp"-->
+            <!--android:paddingBottom="9dp"-->
+            <!--android:background="@drawable/rounded_corner"-->
+            <!--android:backgroundTint="#1c1c1f"-->
+            <!--android:paddingTop="10dp"-->
+            <!--android:src="@drawable/forward"-->
+            <!--/>-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+        <!--android:id="@+id/swipe"-->
+        <!--android:layout_marginTop="55dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="676dp">-->
+        <!--<WebView-->
+            <!--android:id="@+id/search_website"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="676dp"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_marginTop="55dp"-->
+            <!--android:layout_marginBottom="0dp" />-->
+
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+
+
+
+
+
+<!--</RelativeLayout>-->
