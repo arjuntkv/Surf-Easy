@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -30,7 +31,7 @@ import android.widget.Toast;
 
 public class UrlSearch extends AppCompatActivity{
 
-    ImageView searchurlbtn;
+    //ImageView searchurlbtn;
     EditText urlinput;
     ImageView homebtn;
     WebView SearchWebAddress;
@@ -42,6 +43,8 @@ public class UrlSearch extends AppCompatActivity{
     ImageView back;
     ImageView forward;
 
+    ImageView newtabbtn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +55,7 @@ public class UrlSearch extends AppCompatActivity{
 
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
-        searchurlbtn=findViewById(R.id.search_button2);
+        //searchurlbtn=findViewById(R.id.search_button2);
          urlinput=findViewById(R.id.search_edttxt2);
         homebtn=findViewById(R.id.home_button);
         SearchWebAddress=findViewById(R.id.search_website);
@@ -60,6 +63,8 @@ public class UrlSearch extends AppCompatActivity{
 
         back=findViewById(R.id.back_button);
         forward=findViewById(R.id.forward_button);
+
+        newtabbtn=findViewById(R.id.newtab_button);
 
         //swipe icon colors scheme
         swipe.setColorSchemeColors(Color.BLUE,Color.YELLOW,Color.GREEN);
@@ -106,6 +111,16 @@ public class UrlSearch extends AppCompatActivity{
             }
         });
 
+        //to open a new Activity with google.com as loadurl
+        newtabbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent facebook=new Intent(UrlSearch.this,UrlSearch.class);
+                facebook.putExtra("url_address","https://www.google.com");
+                startActivity(facebook);
+            }
+        });
+
 
 
         SearchWebAddress.setWebChromeClient(new MyChrome());
@@ -119,6 +134,7 @@ public class UrlSearch extends AppCompatActivity{
         WebSettings.setSaveFormData(true);
         WebSettings.setEnableSmoothTransition(true);
 
+        //to save instance when something changes(orientation)
         if(savedInstanceState==null){
             SearchWebAddress.post(new Runnable() {
                 @Override
@@ -138,14 +154,28 @@ public class UrlSearch extends AppCompatActivity{
         });
 
 
+            //Search button is changed to enter key
+//        searchurlbtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                openWebsite();
+//            }
+//        });
 
-        searchurlbtn.setOnClickListener(new View.OnClickListener() {
+        //enter key is pressed to load url
+        urlinput.setOnKeyListener(new View.OnKeyListener() {
             @Override
-            public void onClick(View v) {
-                openWebsite();
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
+                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    openWebsite();
+                    return true;
+                }
+                return false;
             }
         });
 
+        //Home button to forward to home page
         homebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

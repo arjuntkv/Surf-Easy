@@ -28,21 +28,21 @@
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white" />
 
-        <ImageView
-            android:id="@+id/search_button"
-            android:layout_width="wrap_content"
-            android:layout_height="45dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginTop="9dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:alpha="0.50"
-            android:background="@drawable/rounded_corner"
-            android:backgroundTint="#1c1c1f"
-            android:paddingLeft="8dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="3dp"
-            android:src="@drawable/search" />
+        <!--<ImageView-->
+            <!--android:id="@+id/search_button"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_marginTop="9dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:alpha="0.50"-->
+            <!--android:background="@drawable/rounded_corner"-->
+            <!--android:backgroundTint="#1c1c1f"-->
+            <!--android:paddingLeft="8dp"-->
+            <!--android:paddingTop="10dp"-->
+            <!--android:paddingBottom="3dp"-->
+            <!--android:src="@drawable/search" />-->
 
         <ImageView
             android:id="@+id/voice_button"

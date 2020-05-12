@@ -7,6 +7,7 @@ import android.speech.RecognizerIntent;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -21,7 +22,7 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ImageView searchButton;
+//    ImageView searchButton;
     EditText inputURL;
 
     ImageButton facebook_btn;
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         g.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION,WindowManager.LayoutParams.TYPE_STATUS_BAR);
         setContentView(R.layout.activity_main);
 
-        searchButton=findViewById(R.id.search_button);
+//        searchButton=findViewById(R.id.search_button);
         inputURL=findViewById(R.id.search_edttxt);
 
         facebook_btn=findViewById(R.id.facebook_btn);
@@ -50,10 +51,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         voicebtn=findViewById(R.id.voice_button);
 
 
-//        txt=findViewById(R.id.txtview);
+        //TO load Url when enter key is pressed
+        inputURL.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
+                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                   openWebsite();
+                    return true;
+                }
+                return false;
+            }
+        });
 
 
-        searchButton.setOnClickListener(this);
+//        searchButton.setOnClickListener(this);
         facebook_btn.setOnClickListener(this);
         insta_btn.setOnClickListener(this);
         twitter_btn.setOnClickListener(this);
@@ -83,9 +95,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if(v==searchButton){
-            openWebsite();
-        }
+//        if(v==searchButton){
+//            openWebsite();
+//        }
 
         if(v==facebook_btn){
             Intent facebook=new Intent(MainActivity.this,UrlSearch.class);
@@ -93,11 +105,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(facebook);
         }
 
-        if(v==youtube_btn){
-            Intent youtube=new Intent(MainActivity.this,UrlSearch.class);
-            youtube.putExtra("url_address","https://www.youtube.com");
-            startActivity(youtube);
-        }
+//        if(v==youtube_btn){
+//            Intent youtube=new Intent(MainActivity.this,UrlSearch.class);
+//            youtube.putExtra("url_address","https://www.youtube.com");
+//            startActivity(youtube);
+//        }
 
         if(v==twitter_btn){
             Intent youtube=new Intent(MainActivity.this,UrlSearch.class);
