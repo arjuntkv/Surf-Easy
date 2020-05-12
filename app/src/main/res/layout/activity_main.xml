@@ -57,7 +57,7 @@
             android:backgroundTint="#1c1c1f"
             android:paddingLeft="8dp"
             android:paddingTop="10dp"
-            android:paddingRight="4dp"
+            android:paddingRight="7dp"
             android:paddingBottom="9dp"
             android:src="@drawable/ic_keyboard_voice_black_24dp" />
 

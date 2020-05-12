@@ -242,7 +242,7 @@ public class UrlSearch extends AppCompatActivity{
         NetworkInfo netInfo = cm.getActiveNetworkInfo();
         if (netInfo != null && netInfo.isConnectedOrConnecting()) {
             SearchWebAddress.loadUrl(url);
-            urlinput.setText(url);
+            //urlinput.setText(url);
         } else {
             SearchWebAddress.setVisibility(View.GONE);
         }
