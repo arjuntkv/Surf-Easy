@@ -16,6 +16,7 @@
             android:id="@+id/search_edttxt"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
+            android:cursorVisible="false"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="24dp"
             android:layout_marginRight="5dp"

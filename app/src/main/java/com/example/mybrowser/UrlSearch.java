@@ -31,7 +31,6 @@ import android.widget.Toast;
 
 public class UrlSearch extends AppCompatActivity{
 
-    //ImageView searchurlbtn;
     EditText urlinput;
     ImageView homebtn;
     WebView SearchWebAddress;
@@ -55,7 +54,6 @@ public class UrlSearch extends AppCompatActivity{
 
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
-        //searchurlbtn=findViewById(R.id.search_button2);
          urlinput=findViewById(R.id.search_edttxt2);
         homebtn=findViewById(R.id.home_button);
         SearchWebAddress=findViewById(R.id.search_website);
@@ -145,22 +143,12 @@ public class UrlSearch extends AppCompatActivity{
         }
 
 
-
         swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
                SearchWebAddress.reload();
             }
         });
-
-
-            //Search button is changed to enter key
-//        searchurlbtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                openWebsite();
-//            }
-//        });
 
         //enter key is pressed to load url
         urlinput.setOnKeyListener(new View.OnKeyListener() {
@@ -298,7 +286,7 @@ public class UrlSearch extends AppCompatActivity{
 
 
 
-
+    //to handle page instance on changing orientation
     public void onPageFinished(WebView view,String url){
         swipe.setRefreshing(false);
     }

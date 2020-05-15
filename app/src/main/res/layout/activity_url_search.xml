@@ -33,6 +33,7 @@
         <EditText
             android:id="@+id/search_edttxt2"
             android:layout_width="wrap_content"
+            android:cursorVisible="false"
             android:layout_height="44dp"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="24dp"
@@ -45,22 +46,6 @@
             android:inputType="textPersonName"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white" />
-
-        <!--<ImageView-->
-            <!--android:id="@+id/search_button2"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="45dp"-->
-            <!--android:layout_gravity="center_vertical"-->
-            <!--android:layout_marginTop="9dp"-->
-            <!--android:layout_marginRight="5dp"-->
-            <!--android:layout_weight="1"-->
-            <!--android:alpha="0.50"-->
-            <!--android:background="@drawable/rounded_corner"-->
-            <!--android:backgroundTint="#1c1c1f"-->
-            <!--android:paddingLeft="8dp"-->
-            <!--android:paddingTop="10dp"-->
-            <!--android:paddingBottom="3dp"-->
-            <!--android:src="@drawable/search" />-->
 
         <ImageView
             android:id="@+id/home_button"

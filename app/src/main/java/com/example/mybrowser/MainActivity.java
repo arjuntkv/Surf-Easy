@@ -11,7 +11,6 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -22,16 +21,13 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-//    ImageView searchButton;
     EditText inputURL;
 
     ImageButton facebook_btn;
-    Button youtube_btn;
     ImageButton insta_btn;
     ImageButton twitter_btn;
     ImageView voicebtn;
 
-    //TextView txt;
     String Voicetext;
 
     @Override
@@ -41,7 +37,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         g.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION,WindowManager.LayoutParams.TYPE_STATUS_BAR);
         setContentView(R.layout.activity_main);
 
-//        searchButton=findViewById(R.id.search_button);
         inputURL=findViewById(R.id.search_edttxt);
 
         facebook_btn=findViewById(R.id.facebook_btn);
@@ -91,25 +86,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-
-
     @Override
     public void onClick(View v) {
-//        if(v==searchButton){
-//            openWebsite();
-//        }
 
         if(v==facebook_btn){
             Intent facebook=new Intent(MainActivity.this,UrlSearch.class);
             facebook.putExtra("url_address","https://www.facebook.com");
             startActivity(facebook);
         }
-
-//        if(v==youtube_btn){
-//            Intent youtube=new Intent(MainActivity.this,UrlSearch.class);
-//            youtube.putExtra("url_address","https://www.youtube.com");
-//            startActivity(youtube);
-//        }
 
         if(v==twitter_btn){
             Intent youtube=new Intent(MainActivity.this,UrlSearch.class);
@@ -134,8 +118,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String url_without_https=urladdress.replaceAll("https://www","");
                 String https="https://";
                 String www="www.";
-
-
 
                 Intent search=new Intent(MainActivity.this,UrlSearch.class);
                 search.putExtra("url_address",https+www+url_without_https);
@@ -163,7 +145,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(resultCode==-1 && null!=data){
                     ArrayList<String> result=data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     Voicetext=result.get(0).toLowerCase();
-//                    txt.setText(Voicetext);
 
                     if(
                             Voicetext.equals("instagram") ||
